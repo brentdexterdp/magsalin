@@ -1,0 +1,732 @@
+<!-- DO NOT EDIT -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magsalin</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="/favicon.ico">
+
+    <style>
+        .vertical-align {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .super-big {
+            font-size: calc(0.2rem + 2.25vw);
+        }
+
+        .navbar-brand {
+            font-family: 'Pixelify Sans';
+            font-weight: 600;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<!-- DO NOT EDIT -->
+
+<body>
+
+    <!-- Start of navigation bar -->
+    <nav class="navbar sticky-top" style="background-color: #92c3a4">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/home/logo.png" height=35px alt="Magsalin">
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Lecture</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="nouns.html" class="dropdown-item">Nouns</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="verbs.html" class="dropdown-item">Verbs</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="adjectives.html" class="dropdown-item">Adjectives</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of navigation bar -->
+
+    <!-- Start of main body content -->
+    <main class="container-fluid py-4 px-5">
+
+        <!-- Try to separate each "activity" in a separate row -->
+
+        <div class="row pb-2">
+            <h1>Verbs</h1>
+            <p>
+                Verbs represent actions, events, or states of being.
+                They are the most important part of a sentence because they tell us what is happening.
+                In Filipino, verbs are called <i>pandiwa</i>.
+            </p>
+            <h2>Base Form of Verbs</h2>
+            <p>
+                The base form of verbs is used in creating the different tenses of verbs which will be discussed below.
+                Examples of base form are "run", "eat", and "sleep". These verbs correspond to "takbo", "kain", and "tulog", 
+                respectively, in Filipino.
+            </p>
+        </div>
+
+        <!-- Start of Activity 1 -->
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 1: Active Recall for Base Form of Verbs</h2>
+                <p>
+                    For this activity, we shall look at the base form of verbs and their Filipino translation.
+                    We use the base form to create the different tenses of verbs which will be discussed below.
+                    You can choose to randomize the ordering and hide the Filpino translations to test yourself.
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>Image</p></b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>English Word</p></b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>Filipino Translation</p></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 px-0 border">
+                    <img src="images/verbs/drink.jpg" id="imageA1V" class="img-fluid">
+                </div>
+                <div class="col-4 border py-auto" height=100%>
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="engTransA1V">Drink</p>
+                        </big>
+                    </div>
+                </div>
+                <div class="col-4 border py-auto" id="filTransBoxA1V" style="background-color: white;">
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="filTransA1V">Inom</p>
+                        </big>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-1 justify-content-center border">
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="hideV" onclick="hideA1V()">
+                        <img src="images/icons/sunglasses.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="prevA1V" onclick="genA1V(-1)">
+                        <img src="images/icons/arrow-left.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="nextA1V" onclick="genA1V(1)">
+                        <img src="images/icons/arrow-right.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA1V" onclick="randA1V()">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Activity 1 -->
+
+        <!-- Start of Activity 2 -->
+
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 2: Translate It On Your Own (Base Form of Verbs)</h2>
+                <p>
+                    For this activity, we will be translating English verbs in base form to Filipino.
+                    Don't worry, the input box is case-insensitive. You can also switch to Filipino-to-English and back!
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p id="givenMarkerA2V">English Word</p></b>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="vertical-align">
+                        <b><p id="answerMarkerA2V">Filipino Translation</p></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <p id="givenA2V">Drink</p>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="row">
+                        <div class="col-8 py-1 ps-2 pe-0">
+                            <input type="text" class="form-control w-100" id="ansA2V"
+                                placeholder="Type your answer here">
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-0">
+                            <button class="btn btn-primary w-100" id="checkA2V" onclick="checkA2V()" title="Check answer">
+                                <img src="images/icons/check-lg.svg">
+                            </button>
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-1">
+                            <button class="btn btn-primary w-100" onclick="genA2V()" title="Skip">
+                                <img src="images/icons/skip-end.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center py-1 border">
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="switchA2V" onclick="switchA2V()" title="Switch to Filipino-to-English">
+                        <img src="images/icons/arrow-left-right.svg">
+                    </button>
+                </div>
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA2V" onclick="randA2V()" title="Randomize">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Activity 2 -->
+
+        <div class="row">
+            <h2>Verb Tense</h2>
+            <p>
+                Verbs can be conjugated in different tenses.
+                The tense of a verb tells us when the action happens.
+                The three main tenses are the past tense, present tense, and future tense.
+                In Filipino, these equate to <i>Pangnagdaan</i>, <i>Pangkasalukuyan</i>, at <i>Panghinaharap</i>.
+            </p>
+            <h3><i>I. Pangnagdaan</i> - Past Tense</h3>
+            <p>
+                The past tense is used to describe actions that have already happened.
+                In Filipino, the past tense is formed by adding <i>nag-</i> to the beginning of the root word.
+                For example, the root word <i>luto</i> means "to cook".
+                Adding <i>nag-</i> to the beginning of the root word gives us <i>nagluto</i>, which means "cooked".
+            </p>
+            <p>
+                The past tense is also formed by adding <i>-um-</i> to the beginning of the root word after the first consonant.
+                For example the root word <i>talon</i> means "to jump".
+                Adding <i>-um-</i> after the first consonant gives us <i>tumalon</i>, which means "jumped".
+                This also happens with <i>inom</i> which means "to drink".
+                However, there is no consonant in the beginning of the word, so the past tense form is <i>uminom</i>, which means "drank".
+            </p>
+            <p>
+                Some verbs use <i>-in-</i> instead of <i>-um-</i> to form the past tense.
+                For example, the root word <i>buhat</i> means "to carry".
+                Adding <i>-in-</i> after the first consonant gives us <i>binuhat</i>, which means "carried".
+            </p>
+        </div>
+
+        <!-- Start of Activity 3 -->
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 3: Active Recall for Past Tense of Verbs</h2>
+                <p>
+                    For this activity, we shall look at the past tense of verbs and their Filipino translation. 
+                    You can choose to randomize the ordering and hide the Filpino translations to test yourself.
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>Image</p></b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>English Word</p></b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>Filipino Translation</p></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 px-0 border">
+                    <img src="images/verbs/drink.jpg" id="imageA3V" class="img-fluid">
+                </div>
+                <div class="col-4 border py-auto" height=100%>
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="engTransA3V">Drank</p>
+                        </big>
+                    </div>
+                </div>
+                <div class="col-4 border py-auto" id="filTransBoxA3V" style="background-color: white;">
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="filTransA3V">Uminom</p>
+                        </big>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-1 justify-content-center border">
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="hideV" onclick="hideA3V()">
+                        <img src="images/icons/sunglasses.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="prevA3V" onclick="genA3V(-1)">
+                        <img src="images/icons/arrow-left.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="nextA3V" onclick="genA3V(1)">
+                        <img src="images/icons/arrow-right.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA3V" onclick="randA3V()">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Activity 3 -->
+
+        <!-- Start of Activity 4 -->
+
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 4: Translate It On Your Own (Past Tense of Verbs)</h2>
+                <p>
+                    For this activity, we will be translating English verbs in past tense to Filipino.
+                    Don't worry, the input box is case-insensitive. You can also switch to Filipino-to-English and back!
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p id="givenMarkerA4V">English Word</p></b>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="vertical-align">
+                        <b><p id="answerMarkerA4V">Filipino Translation</p></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <p id="givenA4V">Drank</p>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="row">
+                        <div class="col-8 py-1 ps-2 pe-0">
+                            <input type="text" class="form-control w-100" id="ansA4V"
+                                placeholder="Type your answer here">
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-0">
+                            <button class="btn btn-primary w-100" id="checkA4V" onclick="checkA4V()" title="Check answer">
+                                <img src="images/icons/check-lg.svg">
+                            </button>
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-1">
+                            <button class="btn btn-primary w-100" onclick="genA4V()" title="Skip">
+                                <img src="images/icons/skip-end.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center py-1 border">
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="switchA4V" onclick="switchA4V()" title="Switch to Filipino-to-English">
+                        <img src="images/icons/arrow-left-right.svg">
+                    </button>
+                </div>
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA4V" onclick="randA4V()" title="Randomize">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Activity 4 -->
+
+        <div class="row">
+            <h3><i>II. Pangkasalukuyan</i> - Present Tense</h3>
+            <p>
+                The present tense is used to describe actions that are happening now.
+                In Filipino, the present tense is formed by adding <i>nag-</i> to the beginning of the root word and
+                repeating the first syllable.
+                For example, the root word <i>luto</i> means "to cook".
+                Adding <i>nag-</i> to the beginning of the root word and repeating <i>lu</i> gives us <i>nagluluto</i>,
+                which means "is cooking"/"cooks".
+            </p>
+            <p>
+                The same pattern occurs with the other verbs, we duplicate the first syllable and use the affix for the past tense form.
+                For example, the past tense form of <i>inom</i> is <i>uminom</i>.
+                Adding <i>um-</i> to the beginning of the word after repeating <i>i</i> gives us <i>umiinom</i>, which means "is drinking"/"drinks".
+            </p>
+            <p>
+                The same goes for the word <i>takbo</i>, which means "to run".
+                First we duplicate the first syllable <i>ta</i> to result in <i>tatakbo</i>.
+                Then we add <i>-um-</i> after the first consonant to result in <i>tumatakbo</i>, which means "is running"/"runs".
+            </p>
+        </div>
+
+        <!-- Start of Activity 5 -->
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 5: Active Recall for Present Tense of Verbs</h2>
+                <p>
+                    For this activity, we shall look at the present tense of verbs and their Filipino translation.
+                    You can choose to randomize the ordering and hide the Filpino translations to test yourself.
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>Image</p></b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>English Word</p></b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>Filipino Translation</p></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 px-0 border">
+                    <img src="images/verbs/drink.jpg" id="imageA5V" class="img-fluid">
+                </div>
+                <div class="col-4 border py-auto" height=100%>
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="engTransA5V">Drinks</p>
+                        </big>
+                    </div>
+                </div>
+                <div class="col-4 border py-auto" id="filTransBoxA5V" style="background-color: white;">
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="filTransA5V">Umiinom</p>
+                        </big>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-1 justify-content-center border">
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="hideV" onclick="hideA5V()">
+                        <img src="images/icons/sunglasses.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="prevA5V" onclick="genA5V(-1)">
+                        <img src="images/icons/arrow-left.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="nextA5V" onclick="genA5V(1)">
+                        <img src="images/icons/arrow-right.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA5V" onclick="randA5V()">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Activity 5 -->
+
+        <!-- Start of Activity 6 -->
+
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 6: Translate It On Your Own (Present Tense of Verbs)</h2>
+                <p>
+                    For this activity, we will be translating English verbs in the present tense to Filipino.
+                    Don't worry, the input box is case-insensitive. You can also switch to Filipino-to-English and back!
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p id="givenMarkerA6V">English Word</p></b>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="vertical-align">
+                        <b><p id="answerMarkerA6V">Filipino Translation</p></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <p id="givenA6V">Drinks</p>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="row">
+                        <div class="col-8 py-1 ps-2 pe-0">
+                            <input type="text" class="form-control w-100" id="ansA6V"
+                                placeholder="Type your answer here">
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-0">
+                            <button class="btn btn-primary w-100" id="checkA6V" onclick="checkA6V()" title="Check answer">
+                                <img src="images/icons/check-lg.svg">
+                            </button>
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-1">
+                            <button class="btn btn-primary w-100" onclick="genA6V()" title="Skip">
+                                <img src="images/icons/skip-end.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center py-1 border">
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="switchA6V" onclick="switchA6V()" title="Switch to Filipino-to-English">
+                        <img src="images/icons/arrow-left-right.svg">
+                    </button>
+                </div>
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA6V" onclick="randA6V()" title="Randomize">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Activity 6 -->
+
+        <div class="row">
+            <h3><i>III. Panghinaharap</i> - Future Tense</h3>
+            <p>
+                The future tense is used to describe actions that will happen in the future.
+                In Filipino, the future tense is formed by adding <i>mag-</i> to the beginning of the root word and
+                repeating the first syllable.
+                For example, the root word <i>luto</i> means "to cook".
+                Adding <i>mag-</i> to the beginning of the root word and repeating <i>lu</i> gives us <i>magluluto</i>,
+                which means "will cook".
+            </p>
+            <p>
+                Some verbs don't use an affix at all and just repeat the first syllable.
+                For example, the root word <i>inom</i> means "to drink".
+                Repeating <i>i</i> gives us <i>iinom</i>, which means "will drink".
+            </p>
+        </div>
+        
+        <!-- Start of Activity 7 -->
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 7: Active Recall for Future Tense of Verbs</h2>
+                <p>
+                    For this activity, we shall look at the future tense of verbs and their Filipino translation. 
+                    You can choose to randomize the ordering and hide the Filpino translations to test yourself.
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>Image</p></b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>English Word</p></b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p>Filipino Translation</p></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 px-0 border">
+                    <img src="images/verbs/drink.jpg" id="imageA7V" class="img-fluid">
+                </div>
+                <div class="col-4 border py-auto" height=100%>
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="engTransA7V">Will drink</p>
+                        </big>
+                    </div>
+                </div>
+                <div class="col-4 border py-auto" id="filTransBoxA7V" style="background-color: white;">
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="filTransA7V">Iinom</p>
+                        </big>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-1 justify-content-center border">
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="hideV" onclick="hideA7V()">
+                        <img src="images/icons/sunglasses.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="prevA7V" onclick="genA7V(-1)">
+                        <img src="images/icons/arrow-left.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="nextA7V" onclick="genA7V(1)">
+                        <img src="images/icons/arrow-right.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA7V" onclick="randA7V()">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Activity 7 -->
+
+        <!-- Start of Activity 8 -->
+
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 8: Translate It On Your Own (Future Tense of Verbs)</h2>
+                <p>
+                    For this activity, we will be translating English verbs in future tense to Filipino.
+                    Don't worry, the input box is case-insensitive. You can also switch to Filipino-to-English and back!
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b><p id="givenMarkerA8V">English Word</p></b>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="vertical-align">
+                        <b><p id="answerMarkerA8V">Filipino Translation</p></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <p id="givenA8V">Will drink</p>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="row">
+                        <div class="col-8 py-1 ps-2 pe-0">
+                            <input type="text" class="form-control w-100" id="ansA8V"
+                                placeholder="Type your answer here">
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-0">
+                            <button class="btn btn-primary w-100" id="checkA8V" onclick="checkA8V()" title="Check answer">
+                                <img src="images/icons/check-lg.svg">
+                            </button>
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-1">
+                            <button class="btn btn-primary w-100" onclick="genA8V()" title="Skip">
+                                <img src="images/icons/skip-end.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center py-1 border">
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="switchA8V" onclick="switchA8V()" title="Switch to Filipino-to-English">
+                        <img src="images/icons/arrow-left-right.svg">
+                    </button>
+                </div>
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA8V" onclick="randA8V()" title="Randomize">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Activity 8 -->
+
+    </main>
+    <!-- End of main body content -->
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="functions-verbs.js"></script>
+    <script src="verbs.js"></script>
+
+</body>
+
+</html>

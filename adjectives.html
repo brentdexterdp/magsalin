@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magsalin</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="/favicon.ico">
+
+    <style>
+        .vertical-align {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .super-big {
+            font-size: calc(0.2rem + 2.25vw);
+        }
+
+        .navbar-brand {
+            font-family: 'Pixelify Sans';
+            font-weight: 600;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start of navigation bar -->
+    <nav class="navbar sticky-top" style="background-color: #92c3a4">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/home/logo.png" height=35px alt="Magsalin">
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Lecture</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="nouns.html" class="dropdown-item">Nouns</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="verbs.html" class="dropdown-item">Verbs</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="adjectives.html" class="dropdown-item">Adjectives</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of navigation bar -->
+
+    <!-- Start of main body content -->
+    <main class="container-fluid py-4 px-5">
+
+        <div class="row pb-2">
+            <h1>Adjectives</h1>
+            <p>
+                Adjectives describe nouns and pronouns.
+                Adjectives can describe kind, quantity, quality, or condition.
+                In Filipino, adjectives are called <i>pang-uri</i>.
+            </p>
+            <p>
+                In Filipino, adjectives fall into two categories: <i>panlarawan</i> [qualitative] and <i>pamilang</i>
+                [quantitative].
+            </p>
+            <div class="row py-1">
+                <h2><i>Pang-uring Panlarawan</i> - Qualitative Adjectives</h2>
+                <p>
+                    Qualitative adjectives describe the qualities of a noun or pronoun.
+                    These adjectives are the most common type of adjectives, and include the appearance, shape, size,
+                    color, and descriptive qualities of a noun or pronoun.
+                    Here are a few examples:
+                </p>
+                <ul class="list-group ms-3 mb-3">
+                    <li class="list-group-item"><i>malaki</i> - big</li>
+                    <li class="list-group-item"><i>malinis</i> - clean</li>
+                    <li class="list-group-item"><i>maganda</i> - beautiful</li>
+                    <li class="list-group-item"><i>magaspang</i> - rough</li>
+                    <li class="list-group-item"><i>magulo</i> - messy</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Start of Activity 1 -->
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 1: Active Recall for Qualitative Adjectives</h2>
+                <p>
+                    For this activity, we shall look at qualitative adjectives and their Filipino translation.
+                    You can choose to randomize the ordering and hide the Filpino translations to test yourself.
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b>
+                            <p>Image</p>
+                        </b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b>
+                            <p>English Word</p>
+                        </b>
+                    </div>
+                </div>
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b>
+                            <p>Filipino Translation</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 px-0 border">
+                    <img src="images/adjectives/sad.jpg" id="imageA1A" class="img-fluid">
+                </div>
+                <div class="col-4 border py-auto" height=100%>
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="engTransA1A">Sad</p>
+                        </big>
+                    </div>
+                </div>
+                <div class="col-4 border py-auto" id="filTransBoxA1A" style="background-color: white;">
+                    <div class="vertical-align super-big">
+                        <big>
+                            <p id="filTransA1A">Malungkot</p>
+                        </big>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-1 justify-content-center border">
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="hideV" onclick="hideA1A()">
+                        <img src="images/icons/sunglasses.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="prevA1A" onclick="genA1A(-1)">
+                        <img src="images/icons/arrow-left.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="nextA1A" onclick="genA1A(1)">
+                        <img src="images/icons/arrow-right.svg">
+                    </button>
+                </div>
+                <div class="col-3 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA1A" onclick="randA1A()">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Activity 1 -->
+
+        <!-- Start of Activity 2 -->
+
+        <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 2: Translate It On Your Own (Qualitative Adjectives)</h2>
+                <p>
+                    For this activity, we will be translating English qualitative adjectives to Filipino.
+                    Don't worry, the input box is case-insensitive. You can also switch to Filipino-to-English and back!
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b>
+                            <p id="givenMarkerA2A">English Word</p>
+                        </b>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="vertical-align">
+                        <b>
+                            <p id="answerMarkerA2A">Filipino Translation</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <p id="givenA2A">Sad</p>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="row">
+                        <div class="col-8 py-1 ps-2 pe-0">
+                            <input type="text" class="form-control w-100" id="ansA2A"
+                                placeholder="Type your answer here">
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-0">
+                            <button class="btn btn-primary w-100" id="checkA2A" onclick="checkA2A()"
+                                title="Check answer">
+                                <img src="images/icons/check-lg.svg">
+                            </button>
+                        </div>
+                        <div class="col-2 py-1 ps-1 pe-1">
+                            <button class="btn btn-primary w-100" onclick="genA2A()" title="Skip">
+                                <img src="images/icons/skip-end.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center py-1 border">
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="switchA2A" onclick="switchA2A()"
+                        title="Switch to Filipino-to-English">
+                        <img src="images/icons/arrow-left-right.svg">
+                    </button>
+                </div>
+                <div class="col-6 ps-1 pe-1">
+                    <button class="btn btn-primary w-100" id="randA2A" onclick="randA2A()" title="Randomize">
+                        <img src="images/icons/shuffle.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Activity 2 -->
+
+        <div class="row py-2">
+            <div class="row py-1">
+                <h2><i>Pang-uring Pamilang</i> - Quantitative Adjectives</h2>
+                <p>
+                    Quantitative adjectives describe the quantity of a noun or pronoun.
+                    These adjectives include numbers, fractions, and other words that describe quantity.
+                    Here are a few examples:
+                </p>
+                <ul class="list-group ms-3 mb-3">
+                    <li class="list-group-item"><i>isa</i> - one</li>
+                    <li class="list-group-item"><i>marami</i> - many</li>
+                    <li class="list-group-item"><i>kaunti</i> - few</li>
+                    <li class="list-group-item"><i>kalahati</i> - half</li>
+                    <li class="list-group-item"><i>buo</i> - whole</li>
+                </ul>
+                <p>
+                    The most basic quantitative adjectives are numbers. It's important to know how to write
+                    numbers in Filipino because they are used in everyday life. Let's start with the 10 basic
+                    numbers:
+                </p>
+                <ul class="list-group ms-3 mb-3">
+                    <li class="list-group-item"><i>isa</i> - one</li>
+                    <li class="list-group-item"><i>dalawa</i> - two</li>
+                    <li class="list-group-item"><i>tatlo</i> - three</li>
+                    <li class="list-group-item"><i>apat</i> - four</li>
+                    <li class="list-group-item"><i>lima</i> - five</li>
+                    <li class="list-group-item"><i>anim</i> - six</li>
+                    <li class="list-group-item"><i>pito</i> - seven</li>
+                    <li class="list-group-item"><i>walo</i> - eight</li>
+                    <li class="list-group-item"><i>siyam</i> - nine</li>
+                    <li class="list-group-item"><i>sampu</i> - ten</li>
+                </ul>
+                <p>
+                    To write numbers 11 to 19, follow the steps below:
+                </p>
+                <ol class="list ps-5 mb-3">
+                    <li>
+                        Write <i>"labin"</i> or <i>"labing"</i> to signify the tens part.
+                        Use <i>"labin"</i> if the ones part starts with a consonant. Otherwise,
+                        use <i>"labing"</i>.
+                    </li>
+                    <li>
+                        Concatenate the translation of the ones part to the tens part.
+                    </li>
+                </ol>
+                <p>
+                    For example, the number 11 translates to <i>labingisa</i> and the number 12
+                    translates to <i>labingdalawa</i>. For your reference, here's the translation of
+                    numbers 11 to 19:
+                </p>
+                <ul class="list-group ms-3 mb-3">
+                    <li class="list-group-item"><i>labingisa</i> - eleven</li>
+                    <li class="list-group-item"><i>labindalawa</i> - twelve</li>
+                    <li class="list-group-item"><i>labintatlo</i> - thirteen</li>
+                    <li class="list-group-item"><i>labingapat</i> - fourteen</li>
+                    <li class="list-group-item"><i>labinlima</i> - fifteen</li>
+                    <li class="list-group-item"><i>labinganim</i> - sixteen</li>
+                    <li class="list-group-item"><i>labinpito</i> - seventeen</li>
+                    <li class="list-group-item"><i>labinwalo</i> - eighteen</li>
+                    <li class="list-group-item"><i>labinsiyam</i> - nineteen</li>
+                </ul>
+
+                <p>
+                    To translate numbers 20 to 99, we first need to know the translation of 20,
+                    30, 40, etc. See the table below:
+                </p>
+                <ul class="list-group ms-3 mb-3">
+                    <li class="list-group-item"><i>dalawampu</i> - twenty</li>
+                    <li class="list-group-item"><i>tatlumpu</i> - thirty</li>
+                    <li class="list-group-item"><i>apatnapu</i> - forty</li>
+                    <li class="list-group-item"><i>limampu</i> - fifty</li>
+                    <li class="list-group-item"><i>animnapu</i> - sixty</li>
+                    <li class="list-group-item"><i>pitumpu</i> - seventy</li>
+                    <li class="list-group-item"><i>walumpu</i> - eighty</li>
+                    <li class="list-group-item"><i>siyamnapu</i> - ninety</li>
+                </ul>
+                <p>
+                    If the ones part is 0, you can use the table above for the translation. For example,
+                    the number 20 has 0 for the ones part. Therefore, it is translated as <i>dalawmpu</i>. 
+                    On the other hand, if the ones part is not zero, you should follow the steps below:
+                </p>
+                <ol class="list ps-5 mb-3">
+                    <li>
+                        Write the tens part as described by the table above.
+                    </li>
+                    <li>
+                        Concatenate <i><b>'t</b></i> to the tens part. This means "and" in English.
+                    </li>
+                    <li>
+                        Add the ones part translation.
+                    </li>
+                </ol>
+                <p>
+                    For example, the number 35 is translated as <i>tatlumpu't lima</i> and the number 96
+                    is translated as <i>siyamnapu't anim</i>.
+                </p>
+                <p>
+                    The process of translating numbers bigger than 99 is more general. In this section, we will only
+                    cover up to the thousands part. You first need to know the translation of "hundred" and "thousand" 
+                    in Filipino:
+                </p>
+                <ul class="list-group ms-3 mb-3">
+                    <li class="list-group-item"><i>daan</i> - hundred</li>
+                    <li class="list-group-item"><i>libo</i> - thousand</li>
+                </ul>
+                <p>
+                    To translate numbers with a hundreds part, follow the steps below:
+                </p>
+                <ol class="list ps-5 mb-3">
+                    <li>
+                        Omit the tens and ones part. For example, the number 178 becomes
+                        "1".
+                    </li>
+                    <li>
+                        Translate the number as if it's a ones part. The "1" in 178 becomes <i>isa</i>.
+                    </li>
+                    <li>
+                        Concatenate "<i><b>ng</b></i>" if the translation ends with a vowel. Otherwise, add 
+                        "<i><b>na</b></i>". Afterwards, add the word <i>"daan"</i>. For example, "1" becomes 
+                        <i>isang daan</i> while "4" becomes <i>apat na daan</i>.
+                    </li>
+                    <li>
+                        If there's a tens and ones part, add the word <i>"at"</i>. This means "and" in English.
+                    </li>
+                    <li>
+                        If there's a tens and ones part, add the translation. Use the rules discussed above for
+                        the ones and tens part.
+                    </li>
+                </ol>
+                <p>
+                    For example, the number 178 translates to <i>isang daan at pitumpu't walo</i> and the number 456 
+                    translates to <i>apat na daan at limampu't anim</i>.
+                </p>
+
+                <p>
+                    Translating numbers with a thousands part is similar to the hundreds case. Follow the steps below:
+                </p>
+                <ol class="list ps-5 mb-3">
+                    <li>
+                        Omit the hundreds, tens, and ones part. For example, the number 178593 becomes
+                        "178".
+                    </li>
+                    <li>
+                        Translate the number using the rules for the hundreds, tens, and ones part. The "178" 
+                        in 178593 becomes <i>isang daan at pitumpu't walo</i>.
+                    </li>
+                    <li>
+                        Concatenate "<i><b>ng</b></i>" if the translation ends with a vowel. Otherwise, add 
+                        "<i><b>na</b></i>". Afterwards, add the word <i>"libo"</i>. For example, "178" becomes 
+                        <i>isang daan at pitumpu't walong libo</i> while "456" becomes <i>apat na daan at limampu't anim na libo</i>.
+                    </li>
+                    <li>
+                        If there's a hundreds, tens, and ones part, concatenate <i><b>'t</b></i>. This means "and" in English.
+                    </li>
+                    <li>
+                        If there's a hundreds, tens, and ones part, add the translation. Use the rules discussed above for the 
+                        hundreds, tens, and ones part.
+                    </li>
+                </ol>
+                <p>
+                    For example, the number 178593 translates to <i>isang daan at pitumpu't walong libo't limang daan at siyamnapu't tatlo</i> 
+                    and the number 456845 translates to <i>apat na daan at limampu't anim na libo't walong daan at apatnapu't lima</i>.
+                </p>
+                
+                <p>
+                    Once you know how to write numbers in Filipino, you can use them to describe nouns. You just need to concatenate 
+                    "<i><b>ng</b></i>" if the translation ends with a vowel or add "<i><b>na</b></i>" if the translations ends with
+                    a consonant.
+                </p>
+                <p>
+                    For example, "178 chickens" translates to <i>isang daan at pitumpu't walong manok</i> while 
+                    "456 chickens" translates to <i>apat na daan at limampu't anim na manok</i>.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- Start of Activity 3 -->
+
+        <!-- <div class="container-fluid px-4 py-3 mb-3 border border-4 border-success rounded-4">
+
+            <div class="row">
+                <h2>Activity 3: Translate It On Your Own (Numbers)</h2>
+                <p>
+                    For this activity, we will be translating English verbs in base form to Filipino.
+                    Don't worry, the input box is case-insensitive. You can also switch to Filipino-to-English and vice
+                    versa!
+                </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="vertical-align">
+                        <b>
+                            <p id="givenMarkerA3A">Number</p>
+                        </b>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="vertical-align">
+                        <b>
+                            <p id="answerMarkerA3A">Filipino Translation</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4 border">
+                    <div class="row">
+                        <div class="col-8 py-1 ps-1 pe-0">
+                            <input type="text" class="form-control w-100" id="givenA3A"
+                                placeholder="Type the number here">
+                        </div>
+                        <div class="col-4 py-1 ps-1 pe-1">
+                            <button class="btn btn-primary w-100" id="genA3A" onclick="genA3A()"
+                                title="Generate translation">
+                                <img src="images/icons/arrow-clockwise.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 border">
+                    <div class="vertical-align">
+                        <p id="ansA3A"></p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- End of Activity 3 -->
+
+    </main>
+    <!-- End of main body content -->
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="adjectives.js"></script>
+    <script src="functions-adjectives.js"></script>
+</body>
+
+</html>
